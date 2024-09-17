@@ -34,6 +34,7 @@ app = Flask(__name__)
 @app.route("/pagina")
 def hello_world():
     return "<p>Hello, World!</p>"
+
 *Guardamos el archivo saliendo del modo de Inserción y guardamos con :wq. Este comado guardará el archivo con los cambios realizados y saldrá del archivo.
 *(Aun dentro del Entorno Virtual) procedemos a instalar Flask. Flask es un microfamework de Python para desarrollo web. Escribimos el comando: pip install flask.
 Pip es un sistema de gestión de paquetes utilizado para instalar y administrar paquetes de software escritos en Python.
