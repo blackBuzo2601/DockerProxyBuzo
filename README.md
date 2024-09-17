@@ -41,7 +41,8 @@ cd /etc/nginx/conf.d. Si listamos los archivos (comando:ls) nos debe aparecer un
   }
   Este location, asigna el puerto 5000 (del servidor) para desplegar nuestro hello world de     
   Python. Nosotros podemos acceder a dicho location entrando a la dirección: http://127.0.0.1:8080/pagina.
-* Ahora, volvemos a ingresar a nuestro usuario del docker y nuevamente entramos a nuestro entorno virtual con los comandos previamente mencionados y vamos a correr nuestra aplicacion de flask con el comando: flask --app hello run. 
+*El siguiente paso es reiniciar el contenedor por completo. Hay que salirnos de la terminal del contenedor y corremos el comando: docker restart iddelcontenedor.
+* Ahora, volvemos a ingresar al contenedor, luego a nuestro usuario del docker y nuevamente entramos a nuestro entorno virtual con los comandos previamente mencionados y vamos a correr nuestra aplicacion de flask con el comando: flask --app hello run. 
 * Si entramos a la pagina http://127.0.0.1:8080/ nos desplegará
   "Welcome to NGINX" lo que indica que el servidor, esta corriendo correctamente. Nótese que e  
   estamos especificando el puerto 8080, el cuál es el que mapeamos para nuestra maquina host.     Si escribimos http://127.0.0.1:8080/pagina nos desplegará el "Hello World" que hicimos con      Flask.
