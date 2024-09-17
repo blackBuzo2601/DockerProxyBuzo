@@ -32,7 +32,7 @@ Crear un contenedor con NGINX mapeando el puerto 8080 de nuestra maquina host al
 * Guardamos el archivo saliendo del modo de Inserción y guardamos con :wq. Este comado guardará el archivo con los cambios realizados y saldrá del archivo.
 *(Aun dentro del Entorno Virtual) procedemos a instalar Flask. Flask es un microfamework de Python para desarrollo web. Escribimos el comando: pip install flask.
 Pip es un sistema de gestión de paquetes utilizado para instalar y administrar paquetes de software escritos en Python.
-* Aun estando dentro del entorno virtual, corremos nuestra aplicacion de flask con el comando siguiente: flask --app hello run. A continuación nos salimos del entorno virtual con el comando: deactivate. En el contenedor nos salimos de nuestro usuario con: exit.
+* A continuación nos salimos del entorno virtual con el comando: deactivate. En el contenedor nos salimos de nuestro usuario con: exit.
 * En el contenedor, vamos a modificar un archivo de nombre conf.d. Nos posicionamos en la raiz del contenedor y accedemos a la siguiente ruta: /etc/nginx/conf.d. Escribimos el comando: 
 cd /etc/nginx/conf.d. Si listamos los archivos (comando:ls) nos debe aparecer un archivo de nombre default.conf.  Lo abrimos con Vim. Escribimos el comando: vim default.conf.
 * El codigo mostrado, no vamos a modificarle nada. Vamos a agregar un bloque de codigo que es el siguiente:
@@ -40,7 +40,9 @@ cd /etc/nginx/conf.d. Si listamos los archivos (comando:ls) nos debe aparecer un
   proxy_pass http://127.0.0.1:5000;
   }
   Este location, asigna el puerto 5000 (del servidor) para desplegar nuestro hello world de     
-  Python. Nosotros podemos acceder a dicho location entrando a la dirección: http://127.0.0.1:8080/pagina. Si entramos a la pagina http://127.0.0.1:8080/ nos desplegará
+  Python. Nosotros podemos acceder a dicho location entrando a la dirección: http://127.0.0.1:8080/pagina.
+* Ahora, volvemos a ingresar a nuestro usuario del docker y nuevamente entramos a nuestro entorno virtual con los comandos previamente mencionados y vamos a correr nuestra aplicacion de flask con el comando: flask --app hello run. 
+* Si entramos a la pagina http://127.0.0.1:8080/ nos desplegará
   "Welcome to NGINX" lo que indica que el servidor, esta corriendo correctamente. Nótese que e  
   estamos especificando el puerto 8080, el cuál es el que mapeamos para nuestra maquina host.     Si escribimos http://127.0.0.1:8080/pagina nos desplegará el "Hello World" que hicimos con      Flask.
 
