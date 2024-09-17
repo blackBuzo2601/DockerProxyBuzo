@@ -1,7 +1,7 @@
 # Backend 1- DOCKER PROXY
 Autor(es): Buzo Zamora Elian
 
-Ultima Actualización: 13/09/2024 (Sin concluir readme aun)
+Ultima Actualización: 13/09/2024
 ## Contenido
 * Requisitos
 * Resumen general
