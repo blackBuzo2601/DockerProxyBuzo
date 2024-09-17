@@ -29,13 +29,13 @@ Crear un contenedor con NGINX mapeando el puerto 8080 de nuestra maquina host al
 * Dentro de la carpeta de nuestro usuario, crearemos un entorno virtual. El comando es: python3 -m venv mientorno. Una vez creado entramos a dicho entorno virtual con el comando: source mientorno/bin/activate.
 * Sabremos que estamos dentro del venv porque aparecera (mientorno) en la terminal. Creamos un archivo de nombre hello.py con el comando sig: vim hello.py. Vim por defecto crea un archivo si el archivo especificado no existe, en este caso se creará un archivo de nombre hello.py.
 * Una vez abierto Vim, entramos al modo de Inserción y ponemos el ejemplo de Flask que viene en la página: https://flask.palletsprojects.com/en/3.0.x/quickstart/. Solo vamos a modificar el parametro de app.route, escribimos "/pagina".
-*Guardamos el archivo saliendo del modo de Inserción y guardamos con :wq. Este comado guardará el archivo con los cambios realizados y saldrá del archivo.
+* Guardamos el archivo saliendo del modo de Inserción y guardamos con :wq. Este comado guardará el archivo con los cambios realizados y saldrá del archivo.
 *(Aun dentro del Entorno Virtual) procedemos a instalar Flask. Flask es un microfamework de Python para desarrollo web. Escribimos el comando: pip install flask.
 Pip es un sistema de gestión de paquetes utilizado para instalar y administrar paquetes de software escritos en Python.
-*Aun estando dentro del entorno virtual, corremos nuestra aplicacion de flask con el comando siguiente: flask --app hello run. A continuación nos salimos del entorno virtual con el comando: deactivate. En el contenedor nos salimos de nuestro usuario con: exit.
-*En el contenedor, vamos a modificar un archivo de nombre conf.d. Nos posicionamos en la raiz del contenedor y accedemos a la siguiente ruta: /etc/nginx/conf.d. Escribimos el comando: 
+* Aun estando dentro del entorno virtual, corremos nuestra aplicacion de flask con el comando siguiente: flask --app hello run. A continuación nos salimos del entorno virtual con el comando: deactivate. En el contenedor nos salimos de nuestro usuario con: exit.
+* En el contenedor, vamos a modificar un archivo de nombre conf.d. Nos posicionamos en la raiz del contenedor y accedemos a la siguiente ruta: /etc/nginx/conf.d. Escribimos el comando: 
 cd /etc/nginx/conf.d. Si listamos los archivos (comando:ls) nos debe aparecer un archivo de nombre default.conf.  Lo abrimos con Vim. Escribimos el comando: vim default.conf.
-*El codigo mostrado, no vamos a modificarle nada. Vamos a agregar un bloque de codigo que es el siguiente:
+* El codigo mostrado, no vamos a modificarle nada. Vamos a agregar un bloque de codigo que es el siguiente:
   location /pagina{
   proxy_pass http://127.0.0.1:5000;
   }
