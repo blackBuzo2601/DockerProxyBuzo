@@ -29,7 +29,6 @@ Crear un contenedor con NGINX mapeando el puerto 8080 de nuestra maquina host al
 * Dentro de la carpeta de nuestro usuario, crearemos un entorno virtual. El comando es: python3 -m venv mientorno. Una vez creado entramos a dicho entorno virtual con el comando: source mientorno/bin/activate.
 * Sabremos que estamos dentro del venv porque aparecera (mientorno) en la terminal. Creamos un archivo de nombre hello.py con el comando sig: vim hello.py. Vim por defecto crea un archivo si el archivo especificado no existe, en este caso se creará un archivo de nombre hello.py.
 * Una vez abierto Vim, entramos al modo de Inserción y ponemos el ejemplo de Flask que viene en la página: https://flask.palletsprojects.com/en/3.0.x/quickstart/. Solo vamos a modificar el parametro de app.route, escribimos "/pagina".
-
 *Guardamos el archivo saliendo del modo de Inserción y guardamos con :wq. Este comado guardará el archivo con los cambios realizados y saldrá del archivo.
 *(Aun dentro del Entorno Virtual) procedemos a instalar Flask. Flask es un microfamework de Python para desarrollo web. Escribimos el comando: pip install flask.
 Pip es un sistema de gestión de paquetes utilizado para instalar y administrar paquetes de software escritos en Python.
