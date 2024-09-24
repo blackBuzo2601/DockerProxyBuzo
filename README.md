@@ -20,7 +20,7 @@ Crear un contenedor con NGINX mapeando el puerto 8080 de nuestra maquina host al
 * Ahora accedemos al contenedor con el comando: Docker exec -it IDDELCONTENEDOR bash. Con este comando accedemos a la terminal del contenedor. Podemos indicar el ID del contenedor o bien, el nombre que le asignamos.
 * Dentro del contenedor, creamos un usuario con el comando: adduser elian. Estamos creando un usuario de nombre elian. Para cambiarnos a ese usuario el comando es: su elian.
 * Dentro del contendor necesitamos instalar algunos paquetes, pero para ello requerimos actualizar el manejador de paquetes de nuestro contenedor. Corremos el comando: apt update. Con esto actualizamos la lista de paquetes disponibles para descargar.
-* Instalamos Python3.11 en el contendor con el sig. comando: Apt install -y Python3.11.
+* Instalamos Python3.11 en el contendor con el sig. comando: apt install -y python3.11.
 * Instalamos VirutalEnv con el comando: Apt Install -y python3.11-venv. VirtualEnv es una herramienta que se utiliza para crear un entorno Python aislado.
 * Instalamos PIP para instalar librerías de Python. Ejecutamos el comando: apt install -y python3-pip.
 * Instalamos vim que es un editor de codigo, como lo es visual studio, pero para Linux. Corremos el comando: Apt install vim.
